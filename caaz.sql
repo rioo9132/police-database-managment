@@ -17,15 +17,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `caaz`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cases`
---
 
 CREATE TABLE `cases` (
   `id` int(11) NOT NULL,
@@ -35,9 +26,7 @@ CREATE TABLE `cases` (
   `case_num` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `cases`
---
+
 
 INSERT INTO `cases` (`id`, `employee_id`, `severity`, `notes`, `case_num`) VALUES
 (2, '1029482', 'Critical', '<p>The Burari case was a criminal investigation that took place in the Burari area of Delhi, India, in 2018. The case involved the deaths of 11 members of a family who were found hanged in their home. The initial investigation focused on the possibility of mass suicide, but later evidence suggested that it was a case of murder. The investigation is ongoing and the cause of the deaths has not yet been definitively determined.</p>', '201809111431489832'),
@@ -46,9 +35,7 @@ INSERT INTO `cases` (`id`, `employee_id`, `severity`, `notes`, `case_num`) VALUE
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `employees`
---
+
 
 CREATE TABLE `employees` (
   `id` int(11) NOT NULL,
@@ -62,20 +49,13 @@ CREATE TABLE `employees` (
   `tmp` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `employees`
---
+
 
 INSERT INTO `employees` (`id`, `employee_id`, `name`, `surname`, `phone`, `email`, `gender`, `joined`, `tmp`) VALUES
 (4, '1938203', 'arnold', 'maruba', '263773891093', 'arnold.maruba@gmail.com', 'M', ' 10 Sep 2018 ', '5267'),
 (5, '1029482', 'partmore', 'kapingura', '263712394859', 'teko@gmail.com', 'M', ' 10 Sep 2018 ', '6954'),
 (6, '1038492', 'samuel', 'makota', '263775011617', 'sam.strover@yahoo.com', 'M', ' 10 Sep 2018 ', '7731');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `picture`
---
 
 CREATE TABLE `picture` (
   `id` int(11) NOT NULL,
@@ -83,9 +63,6 @@ CREATE TABLE `picture` (
   `name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `picture`
---
 
 INSERT INTO `picture` (`id`, `tmp`, `name`) VALUES
 (2, '1301', 'user1301.jpg'),
@@ -95,9 +72,8 @@ INSERT INTO `picture` (`id`, `tmp`, `name`) VALUES
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `users`
---
+
+
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
@@ -113,32 +89,20 @@ CREATE TABLE `users` (
   `phone` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `users`
---
+
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `username`, `password`, `joined`, `type`, `permission`, `gender`, `phone`) VALUES
 (7, 'Jude', 'Suarez', 'suarez081119@gmail.com', 'jude', '827ccb0eea8a706c4c34a16891f84e7b', '08 April 2021', 'user', '1', 'M', '9272777334');
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `cases`
---
 ALTER TABLE `cases`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `employees`
---
+
 ALTER TABLE `employees`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `picture`
---
+
 ALTER TABLE `picture`
   ADD PRIMARY KEY (`id`);
 
@@ -148,30 +112,19 @@ ALTER TABLE `picture`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
--- AUTO_INCREMENT for table `cases`
---
 ALTER TABLE `cases`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
---
--- AUTO_INCREMENT for table `employees`
---
+
 ALTER TABLE `employees`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
---
--- AUTO_INCREMENT for table `picture`
---
+
 ALTER TABLE `picture`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
---
--- AUTO_INCREMENT for table `users`
+
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
